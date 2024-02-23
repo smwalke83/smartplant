@@ -1,5 +1,5 @@
 /* 
- * Project Moisture Sensor and OLED Display
+ * Project Moisture Sensor
  * Author: Scott Walker
  * Date: 2/9/2024
  */
