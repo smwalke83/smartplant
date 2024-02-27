@@ -14,7 +14,7 @@ int currentTime, lastTime;
 String DateTime, TimeOnly;
 Adafruit_SSD1306 display(OLED_RESET);
 
-SYSTEM_MODE(AUTOMATIC);
+SYSTEM_MODE(SEMI_AUTOMATIC);
 
 void setup() {
   
@@ -23,8 +23,8 @@ void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
   display.display();
-  Time.zone(-7);
-  Particle.syncTime();
+  //Time.zone(-7);
+  //Particle.syncTime();
   pinMode(SENSORPIN, INPUT);
   lastTime = -99999;
 
@@ -36,11 +36,11 @@ void loop() {
   if(currentTime - lastTime > 5000){
     moisture = analogRead(SENSORPIN);
     lastTime = millis();
-    DateTime = Time.timeStr();
-    TimeOnly = DateTime.substring(11, 19);
+    //DateTime = Time.timeStr();
+    //TimeOnly = DateTime.substring(11, 19);
     Serial.printf("The moisture is %i.\n", moisture);
-    Serial.printf("The Date/Time is %s.\n", DateTime.c_str());
-    Serial.printf("The Time only is %s.\n", TimeOnly.c_str());
+    //Serial.printf("The Date/Time is %s.\n", DateTime.c_str());
+    //Serial.printf("The Time only is %s.\n", TimeOnly.c_str());
     display.clearDisplay();
     display.setTextSize(1);
     display.setTextColor(WHITE);
