@@ -15,11 +15,11 @@ TCPClient TheClient;
 Adafruit_MQTT_SPARK mqtt(&TheClient,AIO_SERVER,AIO_SERVERPORT,AIO_USERNAME,AIO_KEY); 
 Adafruit_MQTT_Publish aqPub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/air-quality");
 Adafruit_MQTT_Publish dustPub = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/dust");
-const int AQPIN = A1;
+const int AQPIN = A0;
 //AirQualitySensor aqSensor(AQPIN);                         //I investigated the .cpp file and recreated it within this code.
 //int current_quality =-1;
 int rawValue;
-const int DUSTPIN = D6;
+const int DUSTPIN = D4;
 const int SAMPLETIME = 30000;
 int lastTime1;
 int lastTime2;
