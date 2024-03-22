@@ -24,9 +24,9 @@ const int OLEDADDRESS = 0x3C;                                           // Lines
 const int BMEADDRESS = 0x76;
 const int SAMPLETIME = 30000;                                           // 30 Second sample collection time, dust sensor
 const int DEGREE = 0xF8;                                                // Hex for ASCII degree symbol
-const int MOISTURETHRESHOLD = 2000;                                     // Moisture value at which soil is "dry"
+const int MOISTURETHRESHOLD = 1500;                                     // Moisture value at which soil is "dry"
 const int PUMPTIMERMILLIS = 1800000;                                    // How often to check if the pump needs to run, in millis
-const int PUMPTIME = 1000;                                              // How long to run the pump
+const int PUMPTIME = 2000;                                              // How long to run the pump
 unsigned int lowPulseOccupancy;                                         // Lines 30-32 Used in data collection, dust sensor
 unsigned int lastLPO;
 unsigned int duration;
